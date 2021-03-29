@@ -1,6 +1,6 @@
 import Mixin from '@ember/object/mixin';
 
-interface ICalendar {
+export interface ICalendar {
   foo: number;
 }
 
