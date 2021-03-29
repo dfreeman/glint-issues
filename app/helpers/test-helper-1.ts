@@ -2,7 +2,7 @@ import Helper from '@glint/environment-ember-loose/ember-component/helper';
 
 export interface ITestHelper1 {
   readonly NamedArgs: { readonly [key: string]: any };
-  readonly PositionalArgs: [string | undefined];
+  readonly PositionalArgs: [string] | [];
   readonly Return: string;
 }
 
