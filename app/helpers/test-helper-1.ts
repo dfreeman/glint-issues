@@ -3,12 +3,12 @@ import Helper from '@glint/environment-ember-loose/ember-component/helper';
 export interface ITestHelper1 {
   readonly NamedArgs: { readonly [key: string]: any };
   readonly PositionalArgs: [string] | [];
-  readonly Return: string;
+  readonly Return: string | undefined;
 }
 
 export default class TestHelper1 extends Helper<ITestHelper1> {
   public compute([param]: ITestHelper1['PositionalArgs'], named: ITestHelper1['NamedArgs']): ITestHelper1['Return'] {
-    return param ?? named.foo ?? '';
+    return param ?? named.foo;
   }
 }
 
